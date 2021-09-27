@@ -44,8 +44,40 @@ else:
     print("For your information, the correct answer was 'Fricking Quiz Bot', though I'm not sure your tiny brain can comprehend that.")
     time.sleep(2)
 
-# Question Two
+# Question Three
 print ("Now for the second question:\n")
 time.sleep(2)
-print ("Factor 4x^2 - 18x + 18")
+print ("Factor -3x^2 - x + 4")
+answer2 = input().lower().strip(",.!?")
 
+if answer2 == ("-(3x-4)(x-1)"):
+    score = score + 1
+    random_congrats = random.choice(congrats)
+    print (f"{random_congrats}")
+    time.sleep(2)
+
+
+else:
+    random_failure = random.choice(failures)
+    print (f"{random_failure}")
+    time.sleep(2)
+    print("For your information, the correct answer was '-(3x-4)(x-1)'. Go back to math class.")
+    time.sleep(2)
+
+    # Question Three
+    print("Now for the third question:\n")
+    time.sleep(2)
+    print("What is Oscar's name?")
+    answer3 = input().lower().strip(",.!?")
+
+    if answer3 == ("Oscar"):
+        score = score + 1
+        print("Wow! How did you get that question right?? ")
+        time.sleep(2)
+
+
+    else:
+
+        print(f"You know what? I'm just ending the quiz there. How astoundingly stup- Sigh. Your score was {score}. I'm so disappointed in you. ")
+        time.sleep(2)
+        quit()
